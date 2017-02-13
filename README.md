@@ -1,2 +1,2 @@
 # HackerRank
-solve problem from hackerrank.com
+solve problems from [HackerRank](https://www.hackerrank.com)
