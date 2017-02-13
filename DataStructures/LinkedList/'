@@ -1,0 +1,10 @@
+#coding:utf-8
+
+def Reverse(head):
+    node = head
+    prev = None
+    while node:
+        temp = node
+        node.next = prev
+        prev = node
+        node = temp.next
