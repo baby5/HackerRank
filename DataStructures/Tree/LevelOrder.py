@@ -15,10 +15,12 @@ def LevelOrder_iteration(root):
         if not prev_level:
             break
 
+from collections import deque
+
 def LevelOrder_queues(root):
-    queues = [root]
+    queues = deque([root])
     while queues:
-        note = queues.pop[0]
+        note = queues.popleft()
         print note.data
         if note.left:
             queues.append(note.left)

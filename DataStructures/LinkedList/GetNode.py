@@ -1,15 +1,14 @@
 #coding:utf-8
 
-import copy
-
+#stupid
 def GetNode(head, position):
     prev = None
     node = head
     while node:
-        temp = copy.deepcopy(node)
+        temp = node.next
         node.next = prev
         prev = node
-        node = temp.next
+        node = temp
     
     cur = node
     while position:

@@ -9,7 +9,8 @@ def ReversePrint(head):
     for data in data_list[::-1]:
         print data
 
-def ReversePrint_smart(head):
+#smart
+def ReversePrint(head):
     if head is None:
         return
     ReversePrint(head.next)

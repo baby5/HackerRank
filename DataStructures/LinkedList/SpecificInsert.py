@@ -23,11 +23,8 @@ def InsertNth_smart(head, data, position):
         prev = cur
         cur = cur.next
 
-    if count != position:
-        return 0
+    if prev is None:
+        return Node(data, head)
     else:
-        if prev is None:
-            return Node(data, head)
-        else:
-            prev.next = Node(data, cur)
-            return head
+        prev.next = Node(data, cur)
+        return head

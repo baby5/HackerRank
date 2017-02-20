@@ -6,6 +6,6 @@ def has_cycle(head):
     while ptr2 and ptr1.next:
         ptr1 = ptr1.next.next
         ptr2 = ptr2.next
-        if ptr1.data == ptr2.data:
+        if ptr1 is ptr2:
             return 1
     return 0

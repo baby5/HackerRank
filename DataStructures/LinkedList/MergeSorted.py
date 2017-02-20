@@ -1,6 +1,7 @@
 #coding:utf-8
 
-def MergeLists_very_smart(headA, headB):
+#smart
+def MergeLists(headA, headB):
     if headA == None:
         return headB
     if headB == None:

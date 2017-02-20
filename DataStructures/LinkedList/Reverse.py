@@ -1,13 +1,12 @@
 #coding:utf-8
-import copy
 
 def Reverse(head):
-    node = head
+    cur = head
     prev = None
-    while node:
-        temp = copy.deepcopy(node)
-        node.next = prev
-        prev = node
-        node = temp.next
+    while cur:
+        temp = cur.next
+        cur.next = prev
+        prev = cur
+        cur = temp
     head = prev
-    return heda
+    return head

@@ -24,7 +24,7 @@ def SingleRotateWithLeft(K2):
     K1.right = K2
 
     K2.hight = max(Height(K2.left), Height(K2.right)) + 1
-    K1.hight = max(Height(K1.left)), K2.height) + 1
+    K1.hight = max(Height(K1.left), Height(k1.right)) + 1
 
     return K1
 
@@ -34,7 +34,7 @@ def SingleRotateWithRight(K2):
     K1.left = K2
 
     K2.hight = max(Height(K2.right), Height(K2.left)) + 1
-    K1.hight = max(Height(K1.right)), K2.height) + 1
+    K1.hight = max(Height(K1.right), Height(K2.right)) + 1
     
     return K1
 
