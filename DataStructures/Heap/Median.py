@@ -11,27 +11,31 @@ class Heapq_max(object):
         i = len(heap)
         heap.append(None)
 
-        while heap[(i-1)/2] < item and i != 0:
+        while i > 0 and heap[(i-1)/2] < item:
             heap[i] = heap[(i-1)/2]
             i = (i-1)/2
         heap[i] = item
 
     def heappop(self, heap):
         Max = heap[0]
+        heap[0] = heap.pop()
         i = 0
-        i_range = len(heap) - 1
-        while i*2+2 <= i_range:
-            if heap[i*2+2] > heap[i*2+1]:
-                heap[i] = heap[i*2+2]
-                i = i*2 + 2
+        n = len(heap)
+        
+        while 2*i + 1 < n:
+            left = heap[2*i + 1]
+            index = 2*i + 1
+            
+            if 2*i + 2 < n:
+                right = heap[2*i + 2]
+                if right > left:
+                    index = 2*i + 2
+            
+            if heap[i] < heap[index]:
+                heap[i], heap[index] = heap[index], heap[i]
+                i = index
             else:
-                heap[i] = heap[i*2+1]
-                i = i*2 + 1
-
-        if i == i_range:
-            heap.pop()
-        else:
-            heap[i] = heap.pop()
+                break
         
         return Max
 
