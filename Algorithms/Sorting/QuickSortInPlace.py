@@ -37,8 +37,7 @@ def quick_sort_Hoare(ar, low, high):
                 break
 
             ar[i], ar[j] = ar[j], ar[i]
-    
-        ar[j] = p
+            
         print ' '.join(map(str, ar))
         quick_sort_Hoare(ar, low, j-1)
         quick_sort_Hoare(ar, j+1, high)  
